@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #424141;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.container{
+    width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr;/*tenia 4*/
+    grid-template-rows: repeat(2, auto);/*tenia 3*/
+    grid-template-areas: "nav"
+                        "container-contenido";
+    grid-gap: 20px;
+}
+
+.container .nav{
+    min-height: 50px;
+    border: #647EFF solid;
+    background: #fff;
+    color: #647EFF;
+    grid-area: nav;
+}
+
+.container-contenido{
+    width: 90%;
+    display: flex;
+    align-content: center;
+    grid-area: container-contenido;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "main main aside aside"
+                        "footer footer footer footer";
+    grid-gap: 20px;
+}
+
+.container .main{
+    border: #e61e82 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: main;
+    display: grid;
+    grid-template-rows: span 3;
+    grid-template-rows: subgrid;  
+}
+
+.container .aside{
+    background: #d8d3d3;
+    border: #2af166 solid;
+    grid-area: aside;
+}
+
+.container .footer{
+    background: #3f49cf;
+    border: #bcdb08 solid;
+    grid-area: footer;
+}
+
+.container .footer > ul{
+    list-style: none;
+    
+}
