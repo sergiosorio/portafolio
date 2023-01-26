@@ -6,12 +6,13 @@
 body{
     background: #424141;
     color: #fff;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
 }
 
+/* CONTENEDOR PRINCIPAL */
 .container{
     width: 100%;
-    margin: 20px auto;
     display: grid;
     grid-template-columns: 1fr;/*tenia 4*/
     grid-template-rows: repeat(2, auto);/*tenia 3*/
@@ -20,16 +21,63 @@ body{
     grid-gap: 20px;
 }
 
-.container .nav{
-    min-height: 50px;
-    border: #647EFF solid;
+/* MENU */
+.nav{
     background: #fff;
-    color: #647EFF;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     grid-area: nav;
 }
 
+/* LOGO */
+.logo{
+    transform: rotate(140deg);
+    border: #d8d3d3 solid;
+}
+
+.logo > a{
+    font-size: 25px;
+    color: #42d392;
+}
+
+/* LINKS */
+.menu > a{
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.25em;
+    color: #647EFF;
+}
+
+a:hover{
+    color: #42d392;
+}
+
+/* REDES SOCIALES */
+.redes-sociales > ul > li{
+    font-size: 1.25em;
+    margin: auto;
+    list-style: none;
+    display: inline;
+}
+
+.redes-sociales ul li i.fa-linkedin{
+    color: #0077b5;
+}
+
+.redes-sociales ul li i.fa-github{
+    color: #171515;
+}
+
+.redes-sociales ul li i.fa-square-twitter{
+    color: #00acee;
+}
+
+/* CONTENIDO */
 .container-contenido{
     width: 90%;
+    margin: auto;
     display: flex;
     align-content: center;
     grid-area: container-contenido;
@@ -44,15 +92,40 @@ body{
 
 .container .main{
     border: #e61e82 solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;   
     grid-area: main;
-    display: grid;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    
+    /*display: grid;
     grid-template-rows: span 3;
-    grid-template-rows: subgrid;  
+    grid-template-rows: subgrid;*/
 }
 
+/*.container .main .center{
+    border: #3f49cf solid;  
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}*/
+
+.container .main > p{
+    border: #2af166 solid;
+    font-size: 16px;
+    display: flex;
+    display: block;
+    
+}
+
+.main > h2{
+    border: #2af166 solid;
+    display: flex;
+    display: block;
+    
+    
+}
 .container .aside{
     background: #d8d3d3;
     border: #2af166 solid;
@@ -66,6 +139,9 @@ body{
 }
 
 .container .footer > ul{
-    list-style: none;
-    
+    list-style: none;  
+}
+
+.container .footer > div, span{
+    border: #e61e82 solid;
 }
