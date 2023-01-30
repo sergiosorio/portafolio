@@ -4,7 +4,8 @@
 }
 
 body{
-    background: #424141;
+   
+    background: #fafafa;
     color: #fff;
     font-family: 'Source Code Pro', monospace;
     font-size: 20px;
@@ -18,7 +19,6 @@ body{
     grid-template-rows: repeat(2, auto);/*tenia 3*/
     grid-template-areas: "nav"
                         "container-contenido";
-    grid-gap: 20px;
 }
 
 /* MENU */
@@ -76,6 +76,8 @@ a:hover{
 
 /* CONTENIDO */
 .container-contenido{
+    background: #424141;
+    border-radius: 10px;
     width: 90%;
     margin: auto;
     display: flex;
@@ -89,51 +91,52 @@ a:hover{
                         "footer footer footer footer";
     grid-gap: 20px;
 }
-
-.container .main{
-    border: #e61e82 solid;
-    text-align: center;   
+/*CONTENIDO DEL MAIM*/
+.container-contenido .main{
+    
+    font-size: 1.5em;
+    text-align: center;
     grid-area: main;
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
-    
-    /*display: grid;
-    grid-template-rows: span 3;
-    grid-template-rows: subgrid;*/
-}
-
-/*.container .main .center{
-    border: #3f49cf solid;  
-    display: flex;
-    
-    align-items: center;
-    justify-content: center;
-}*/
-
-.container .main > p{
-    border: #2af166 solid;
-    font-size: 16px;
-    display: flex;
-    display: block;
+    align-self: center;
     
 }
 
-.main > h2{
-    border: #2af166 solid;
-    display: flex;
-    display: block;
-    
-    
+@keyframes colores {
+    0% {background: linear-gradient(155deg,#42d392, #647eff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
+
+    100% {background: linear-gradient(135deg,#647eff, #42d392);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
 }
-.container .aside{
-    background: #d8d3d3;
-    border: #2af166 solid;
+
+.container-contenido .main > h2 {
+    font-size: 2em;
+    font-style: oblique;
+    font-weight: bold;
+    animation: colores 5s infinite;
+}
+
+/*CONTENIDO DEL ASIDE*/
+.container-contenido .aside{
     grid-area: aside;
 }
 
-.container .footer{
-    background: #3f49cf;
+.container-contenido .aside > figure{
+    display: flex;
+}
+
+.container-contenido .aside figure > img{
+    display: block;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container-contenido .footer{
+   
     border: #bcdb08 solid;
     grid-area: footer;
 }
